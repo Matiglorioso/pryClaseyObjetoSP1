@@ -44,12 +44,17 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mrcRepuestos = new System.Windows.Forms.GroupBox();
+            this.lstRepuestos = new System.Windows.Forms.ListBox();
             this.mrcRepuestos.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
+            "Marca A",
+            "Marca B"});
             this.cmbMarca.Location = new System.Drawing.Point(96, 149);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(174, 21);
@@ -90,7 +95,6 @@
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 4;
             this.lblPrecio.Text = "Precio";
-            this.lblPrecio.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblOrigen
             // 
@@ -152,7 +156,6 @@
             this.btnSalir.TabIndex = 15;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCargar
             // 
@@ -162,6 +165,7 @@
             this.btnCargar.TabIndex = 16;
             this.btnCargar.Text = "&Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnConsultar
             // 
@@ -171,6 +175,7 @@
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "C&onsultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnCancelar
             // 
@@ -201,11 +206,20 @@
             this.mrcRepuestos.TabStop = false;
             this.mrcRepuestos.Text = "Repuestos";
             // 
+            // lstRepuestos
+            // 
+            this.lstRepuestos.FormattingEnabled = true;
+            this.lstRepuestos.Location = new System.Drawing.Point(12, 368);
+            this.lstRepuestos.Name = "lstRepuestos";
+            this.lstRepuestos.Size = new System.Drawing.Size(331, 147);
+            this.lstRepuestos.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 450);
+            this.ClientSize = new System.Drawing.Size(436, 543);
+            this.Controls.Add(this.lstRepuestos);
             this.Controls.Add(this.mrcRepuestos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConsultar);
@@ -213,6 +227,7 @@
             this.Controls.Add(this.btnSalir);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.mrcRepuestos.ResumeLayout(false);
             this.mrcRepuestos.PerformLayout();
             this.ResumeLayout(false);
@@ -237,6 +252,7 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox mrcRepuestos;
+        private System.Windows.Forms.ListBox lstRepuestos;
     }
 }
 
