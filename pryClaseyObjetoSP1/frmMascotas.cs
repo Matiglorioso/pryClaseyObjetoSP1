@@ -20,17 +20,26 @@ namespace pryClaseyObjetoSP1
         private void btnCargar_Click(object sender, EventArgs e)
         {
             clsMascota mascota = new clsMascota();
-            LimpiarInterfaz();
+            
             mascota.Nombre = txtNombre.Text;
-            mascota.TipoAnimal = txtTipo.Text;
+            mascota.TipoAnimal = cmbTipo.Text;
             mascota.Edad = Convert.ToInt32(txtEdad.Text);
+
+            mascota.Mascotax = new PictureBox();
+            if(cmbTipo.SelectedIndex == 0)
+            {
+                mascota.Mascotax.SizeMode = PictureBoxSizeMode.StretchImage;
+                mascota.Mascotax.ImageLocation = "perro1.jpg";
+                mascota.Mascotax.Location = new Point(300, 300);
+            }
             ListaMasc.Add(mascota);
+            LimpiarInterfaz();
 
         }
         public void LimpiarInterfaz()
         { 
             txtEdad.Text = " ";
-            txtTipo.Text = " ";
+            cmbTipo.SelectedIndex = 0;
             txtNombre.Text = " ";
             lstMascotas.Items.Clear();  
         

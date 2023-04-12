@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryClaseyObjetoSP1
 {
@@ -12,17 +13,11 @@ namespace pryClaseyObjetoSP1
         public string TipoAnimal  { get; set; }
         public int Edad { get; set; }
 
-        public void Jugar()
+        public PictureBox Mascotax;
+      
+        public string Consultar()
         {
-
-        }
-        public void Cuidar()
-        {
-
-        }
-        public void Alimentar()
-        {
-
+            return "Nombre de la mascota: " + Nombre + " Tipo: " + TipoAnimal + " Edad: " + Edad;
         }
     }
 }
