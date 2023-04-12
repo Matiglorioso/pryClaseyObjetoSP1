@@ -41,6 +41,7 @@ namespace pryClaseyObjetoSP1
                 repuestos.Origen = "Nacional";
             }
             ListaRep.Add(repuestos);
+
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace pryClaseyObjetoSP1
             foreach(clsRepuestos repuestos in ListaRep)
             {
                 lstRepuestos.Items.Add(repuestos.Consultar());
-                //lstRepuestos.Items.Add(repuestos.Codigo + " " + repuestos.Nombre + " " + repuestos.Marca + " $" + repuestos.Precio + " " + repuestos.Origen);
+                lstRepuestos.Items.Add(repuestos.Codigo + " " + repuestos.Nombre + " " + repuestos.Marca + " $" + repuestos.Precio + " " + repuestos.Origen);
             }
         }
         public void LimpiarInterfaz()
@@ -56,8 +57,13 @@ namespace pryClaseyObjetoSP1
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtPrecio.Text = "";
-            cmbMarca.SelectedItem = 0;
+            cmbMarca.SelectedIndex = 0;
             optNacional.Checked = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

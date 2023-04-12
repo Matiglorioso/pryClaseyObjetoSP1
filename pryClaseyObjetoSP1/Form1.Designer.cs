@@ -45,7 +45,13 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mrcRepuestos = new System.Windows.Forms.GroupBox();
             this.lstRepuestos = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.mrcRepuestos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMarca
@@ -58,7 +64,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(96, 149);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(174, 21);
-            this.cmbMarca.TabIndex = 0;
+            this.cmbMarca.TabIndex = 2;
             // 
             // lblCodigo
             // 
@@ -132,28 +138,28 @@
             this.txtPrecio.Location = new System.Drawing.Point(96, 200);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(131, 20);
-            this.txtPrecio.TabIndex = 11;
+            this.txtPrecio.TabIndex = 3;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(96, 97);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(131, 20);
-            this.txtNombre.TabIndex = 13;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(96, 45);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(131, 20);
-            this.txtCodigo.TabIndex = 14;
+            this.txtCodigo.TabIndex = 0;
             // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(349, 221);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(84, 32);
-            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
@@ -162,7 +168,7 @@
             this.btnCargar.Location = new System.Drawing.Point(349, 94);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(84, 32);
-            this.btnCargar.TabIndex = 16;
+            this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "&Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
@@ -172,7 +178,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(349, 133);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(84, 32);
-            this.btnConsultar.TabIndex = 17;
+            this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "C&onsultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -182,7 +188,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(349, 185);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 32);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -202,7 +208,7 @@
             this.mrcRepuestos.Location = new System.Drawing.Point(7, 24);
             this.mrcRepuestos.Name = "mrcRepuestos";
             this.mrcRepuestos.Size = new System.Drawing.Size(336, 302);
-            this.mrcRepuestos.TabIndex = 19;
+            this.mrcRepuestos.TabIndex = 0;
             this.mrcRepuestos.TabStop = false;
             this.mrcRepuestos.Text = "Repuestos";
             // 
@@ -214,11 +220,39 @@
             this.lstRepuestos.Size = new System.Drawing.Size(331, 147);
             this.lstRepuestos.TabIndex = 20;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(527, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(527, 95);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(527, 151);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 543);
+            this.ClientSize = new System.Drawing.Size(651, 543);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lstRepuestos);
             this.Controls.Add(this.mrcRepuestos);
             this.Controls.Add(this.btnCancelar);
@@ -226,10 +260,13 @@
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.btnSalir);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "01";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mrcRepuestos.ResumeLayout(false);
             this.mrcRepuestos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,6 +290,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox mrcRepuestos;
         private System.Windows.Forms.ListBox lstRepuestos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
