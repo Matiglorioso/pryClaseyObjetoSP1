@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Globalization;
 
 namespace pryClaseyObjetoSP1
 {
@@ -14,10 +16,6 @@ namespace pryClaseyObjetoSP1
         public decimal Precio { get; set; }
         public string Origen { get; set; }
 
-        public string Consultar()
-        {
 
-            return Codigo + " " + Nombre + " " + Marca + " $" + Precio + " " + Origen;
-        }
     }
 }

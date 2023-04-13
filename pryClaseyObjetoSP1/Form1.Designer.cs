@@ -1,6 +1,6 @@
 ﻿namespace pryClaseyObjetoSP1
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -44,14 +44,8 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mrcRepuestos = new System.Windows.Forms.GroupBox();
-            this.lstRepuestos = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.mrcRepuestos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMarca
@@ -60,10 +54,11 @@
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Items.AddRange(new object[] {
             "Marca A",
-            "Marca B"});
+            "Marca B",
+            "Marca C"});
             this.cmbMarca.Location = new System.Drawing.Point(96, 149);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(174, 21);
+            this.cmbMarca.Size = new System.Drawing.Size(131, 21);
             this.cmbMarca.TabIndex = 2;
             // 
             // lblCodigo
@@ -137,7 +132,7 @@
             // 
             this.txtPrecio.Location = new System.Drawing.Point(96, 200);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(131, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(82, 20);
             this.txtPrecio.TabIndex = 3;
             // 
             // txtNombre
@@ -162,6 +157,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCargar
             // 
@@ -191,9 +187,11 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // mrcRepuestos
             // 
+            this.mrcRepuestos.Controls.Add(this.label1);
             this.mrcRepuestos.Controls.Add(this.lblCodigo);
             this.mrcRepuestos.Controls.Add(this.cmbMarca);
             this.mrcRepuestos.Controls.Add(this.lblNombre);
@@ -212,61 +210,31 @@
             this.mrcRepuestos.TabStop = false;
             this.mrcRepuestos.Text = "Repuestos";
             // 
-            // lstRepuestos
+            // label1
             // 
-            this.lstRepuestos.FormattingEnabled = true;
-            this.lstRepuestos.Location = new System.Drawing.Point(12, 368);
-            this.lstRepuestos.Name = "lstRepuestos";
-            this.lstRepuestos.Size = new System.Drawing.Size(331, 147);
-            this.lstRepuestos.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "$";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(527, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(527, 95);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(527, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
-            // Form1
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 543);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lstRepuestos);
+            this.ClientSize = new System.Drawing.Size(456, 350);
             this.Controls.Add(this.mrcRepuestos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.btnSalir);
-            this.Name = "Form1";
-            this.Text = "01";
+            this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AUTOCITY";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mrcRepuestos.ResumeLayout(false);
             this.mrcRepuestos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,10 +257,7 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox mrcRepuestos;
-        private System.Windows.Forms.ListBox lstRepuestos;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
 

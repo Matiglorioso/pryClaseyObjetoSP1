@@ -16,7 +16,7 @@ namespace pryClaseyObjetoSP1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMascotas());
+            Application.Run(new frmPrincipal());
         }
     }
 }

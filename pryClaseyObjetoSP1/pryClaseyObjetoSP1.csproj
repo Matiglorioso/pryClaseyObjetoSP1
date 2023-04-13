@@ -54,22 +54,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="E:\Escritorio\frmMascotas.cs">
+    <Compile Include="frmConsulta.cs">
       <SubType>Form</SubType>
-      <Link>frmMascotas.cs</Link>
     </Compile>
-    <Compile Include="E:\Escritorio\frmMascotas.Designer.cs">
-      <DependentUpon>frmMascotas.cs</DependentUpon>
-      <Link>frmMascotas.Designer.cs</Link>
+    <Compile Include="frmConsulta.Designer.cs">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="E:\Escritorio\frmMascotas.resx">
-      <DependentUpon>frmMascotas.cs</DependentUpon>
-      <Link>frmMascotas.resx</Link>
+    <EmbeddedResource Include="frmConsulta.resx">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
