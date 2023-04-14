@@ -52,10 +52,6 @@
             // 
             this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Items.AddRange(new object[] {
-            "Marca A",
-            "Marca B",
-            "Marca C"});
             this.cmbMarca.Location = new System.Drawing.Point(96, 149);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(131, 21);

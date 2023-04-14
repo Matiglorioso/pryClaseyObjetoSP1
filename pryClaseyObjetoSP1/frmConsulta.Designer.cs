@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.optNacional = new System.Windows.Forms.RadioButton();
             this.optImportado = new System.Windows.Forms.RadioButton();
             this.optAmbos = new System.Windows.Forms.RadioButton();
             this.mrcOrigen = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRepuestos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,21 +41,10 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.mrcOrigen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRepuestos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Items.AddRange(new object[] {
-            "Marca A",
-            "Marca B"});
-            this.cmbMarca.Location = new System.Drawing.Point(125, 22);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(131, 21);
-            this.cmbMarca.TabIndex = 4;
             // 
             // lblMarca
             // 
@@ -112,19 +100,19 @@
             this.mrcOrigen.TabStop = false;
             this.mrcOrigen.Text = "Origen";
             // 
-            // dataGridView1
+            // dgvRepuestos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRepuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRepuestos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(52, 145);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 293);
-            this.dataGridView1.TabIndex = 15;
+            this.dgvRepuestos.Location = new System.Drawing.Point(52, 145);
+            this.dgvRepuestos.Name = "dgvRepuestos";
+            this.dgvRepuestos.Size = new System.Drawing.Size(544, 293);
+            this.dgvRepuestos.TabIndex = 15;
             // 
             // Column1
             // 
@@ -159,6 +147,7 @@
             this.btnSalir.TabIndex = 16;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnConsultar
             // 
@@ -168,38 +157,47 @@
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "&Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(111, 22);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarca.TabIndex = 18;
             // 
             // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRepuestos);
             this.Controls.Add(this.mrcOrigen);
-            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.lblMarca);
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AUTOCITY - Consulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.mrcOrigen.ResumeLayout(false);
             this.mrcOrigen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRepuestos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.RadioButton optNacional;
         private System.Windows.Forms.RadioButton optImportado;
         private System.Windows.Forms.RadioButton optAmbos;
         private System.Windows.Forms.GroupBox mrcOrigen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRepuestos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -207,5 +205,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.ComboBox cmbMarca;
     }
 }

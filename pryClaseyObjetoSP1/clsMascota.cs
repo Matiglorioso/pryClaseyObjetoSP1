@@ -14,7 +14,7 @@ namespace pryClaseyObjetoSP1
      
         public string NombreArchivo { get; set; }
         
-        public bool GrabarRepuesto(clsRepuestos repuesto)
+        public bool GrabarRepuesto(Repuestos repuesto)
         {
             bool resultado = false;
             if (NombreArchivo != "")
@@ -57,9 +57,9 @@ namespace pryClaseyObjetoSP1
             }
             return resultado;
         }
-        public List <clsRepuestos> ObtenerRepuestos()
+        public List <Repuestos> ObtenerRepuestos()
         {
-            List <clsRepuestos> listaRep = new List<clsRepuestos>();
+            List <Repuestos> listaRep = new List<Repuestos>();
             string Linea;
             if(NombreArchivo != "" && File.Exists (NombreArchivo))
             {
@@ -67,7 +67,7 @@ namespace pryClaseyObjetoSP1
                 while(sr.EndOfStream == false) 
                 {
                     Linea = sr.ReadLine(); //lee una linea
-                    clsRepuestos rep = new clsRepuestos();
+                    Repuestos rep = new Repuestos();
                     rep.Codigo = Linea.Split(',')[0];
                     rep.Nombre = Linea.Split(',')[1];
                     rep.Marca = Linea.Split(',')[2];
@@ -80,10 +80,10 @@ namespace pryClaseyObjetoSP1
             }
             return listaRep;
         }
-        public List <clsRepuestos> ObtenerRepOrdenados()
+        public List <Repuestos> ObtenerRepOrdenados()
         {
-            List<clsRepuestos> Lista = ObtenerRepuestos();
-            clsRepuestos[] repArray = Lista.ToArray();
+            List<Repuestos> Lista = ObtenerRepuestos();
+            Repuestos[] repArray = Lista.ToArray();
             
             for(int i = 0; i < repArray.Length - 1; i++)//ordena de menor a mayot 
             {
@@ -91,14 +91,14 @@ namespace pryClaseyObjetoSP1
                 {
                     if (string.Compare(repArray[c].Nombre, repArray[c+1].Nombre) > 0)
                     {
-                        clsRepuestos aux = repArray[c];
+                        Repuestos aux = repArray[c];
                         repArray[c] = repArray[c+1];
                         repArray[c+1] = aux;
                     }
                 }
 
             }
-            List<clsRepuestos> Ordenados = repArray.ToList<clsRepuestos>();//convierte el arreglo ordenado en una lista
+            List<Repuestos> Ordenados = repArray.ToList<Repuestos>();//convierte el arreglo ordenado en una lista
             return Ordenados;
         }
     }

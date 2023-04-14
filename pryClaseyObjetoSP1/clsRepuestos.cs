@@ -8,7 +8,9 @@ using System.Globalization;
 
 namespace pryClaseyObjetoSP1
 {
-    internal class clsRepuestos
+    internal class Repuestos
+
+
     {
         public string Codigo { get; set; }
         public string Nombre { get; set; }

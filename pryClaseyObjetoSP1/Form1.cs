@@ -22,13 +22,17 @@ namespace pryClaseyObjetoSP1
         {
             txtCodigo.Focus();
             LimpiarInterfaz();
+            cmbMarca.Items.Add("Marca A");
+            cmbMarca.Items.Add("Marca B");
+            cmbMarca.Items.Add("Marca C");
+
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
             if(Validar())
             {
-                clsRepuestos nuevoRep = CrearRep();
+                Repuestos nuevoRep = CrearRep();
                 Archivo Repuestos = new Archivo();
                 Repuestos.NombreArchivo = PATH_ARCHIVO;
                 Repuestos.GrabarRepuesto(nuevoRep);
@@ -59,9 +63,9 @@ namespace pryClaseyObjetoSP1
             }
             return resultado;
         }
-        private clsRepuestos CrearRep()
+        private Repuestos CrearRep()
         {
-            clsRepuestos nuevoRep = new clsRepuestos();
+            Repuestos nuevoRep = new Repuestos();
             nuevoRep.Codigo = txtCodigo.Text;
             nuevoRep.Nombre = txtNombre.Text;
             nuevoRep.Marca = cmbMarca.SelectedItem.ToString();
@@ -80,7 +84,7 @@ namespace pryClaseyObjetoSP1
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            frmConsulta x = new frmConsulta();
+            frmConsulta x = new frmConsulta(PATH_ARCHIVO);
             x.ShowDialog();
         }
         public void LimpiarInterfaz()
@@ -88,7 +92,7 @@ namespace pryClaseyObjetoSP1
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtPrecio.Text = "";
-            cmbMarca.SelectedIndex = 0;
+            cmbMarca.SelectedItem = 0;
             optNacional.Checked = true;
         }
 
